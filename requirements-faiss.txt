@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# Optional vector backend. The app falls back to JsonVectorIndex when unavailable.
+faiss-cpu

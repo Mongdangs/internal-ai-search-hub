@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# Optional renderer for native PowerPoint slide image previews on Windows.
+pywin32

@@ -1,0 +1,50 @@
+root_folders:
+  - 'H:\01.제안서'
+  - 'H:\02.사업수행'
+
+data_dir: "data"
+
+indexing:
+  supported_extensions:
+    - ".pdf"
+    - ".docx"
+    - ".ppt"
+    - ".pptx"
+  chunk_size: 1000
+  chunk_overlap: 150
+  use_ocr: false
+
+search:
+  top_k: 20
+  keyword_weight: 0.4
+  vector_weight: 0.6
+
+embedding:
+  provider: "hashing"
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  dimensions: 384
+
+security:
+  exclude_patterns:
+    - "견적"
+    - "원가"
+    - "계약"
+    - "개인정보"
+    - "\\old\\"
+    - "/old/"
+    - "참고자료"
+    - "참조자료"
+    - "참고용"
+    - "참조용"
+    - "reference"
+    - "backup"
+    - "백업"
+    - "sample"
+    - "temp"
+    - "임시"
+    - "~$"
+  enable_acl: false
+  exclude_reference_materials: true
+
+ui:
+  page_title: "사내 산출물·제안서 근거형 검색 PoC"
